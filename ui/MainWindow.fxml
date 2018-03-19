@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.822" minHeight="700.0" minWidth="1366.0" prefHeight="700.0" prefWidth="1366.0" styleClass="splitPane" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MainWindowController">
+    <items>
+        <AnchorPane fx:id="apnMain" minHeight="698.0" minWidth="1118.0" prefHeight="698.0" prefWidth="1118.0" styleClass="anchorPane" stylesheets="@../css/style.css">
+            <children>
+                <Pane fx:id="paneDash" minHeight="698.0" minWidth="1118.0" prefHeight="698.0" prefWidth="1118.0">
+                    <children>
+                        <ImageView fx:id="imgHomeBackground" fitHeight="698.0" fitWidth="1118.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/WindowBackground.jpg" />
+                            </image>
+                        </ImageView>
+                        <ToggleButton fx:id="tglDailyTappingDash" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="159.0" layoutY="99.0" mnemonicParsing="false" onMouseClicked="#tglDailyTappingDashMC" prefHeight="200.0" prefWidth="200.0" styleClass="dashbuttons" text="Daily Tapping" textAlignment="JUSTIFY" wrapText="true">
+                            <graphic>
+                                <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/MainWindow/tapping.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </ToggleButton>
+                        <ToggleButton fx:id="tglProductionDash" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="459.0" layoutY="99.0" mnemonicParsing="false" onMouseClicked="#tglProductionDashMC" prefHeight="200.0" prefWidth="200.0" styleClass="dashbuttons" text="Production" textAlignment="JUSTIFY" wrapText="true">
+                            <graphic>
+                                <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/MainWindow/production.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </ToggleButton>
+                        <ToggleButton fx:id="tglTreatmentDash" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="459.0" layoutY="399.0" mnemonicParsing="false" onMouseClicked="#tglTreatmentDashMC" prefHeight="200.0" prefWidth="200.0" styleClass="dashbuttons" text="Treatment" textAlignment="JUSTIFY" wrapText="true">
+                            <graphic>
+                                <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/MainWindow/treatment.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </ToggleButton>
+                        <ToggleButton fx:id="tglAssignmentDash" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="759.0" layoutY="99.0" mnemonicParsing="false" onMouseClicked="#tglAssignmentDashMC" prefHeight="200.0" prefWidth="200.0" styleClass="dashbuttons" text="Employee Assignment" textAlignment="CENTER" wrapText="true">
+                            <graphic>
+                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/MainWindow/assignment.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </ToggleButton>
+                        <ToggleButton fx:id="tglComplainDash" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="159.0" layoutY="399.0" mnemonicParsing="false" onMouseClicked="#tglComplainDashMC" prefHeight="200.0" prefWidth="200.0" styleClass="dashbuttons" text="Complain" textAlignment="JUSTIFY" wrapText="true">
+                            <graphic>
+                                <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/MainWindow/complain.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </ToggleButton>
+                        <ToggleButton fx:id="tglReportDash" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="759.0" layoutY="399.0" mnemonicParsing="false" onMouseClicked="#tglReportDashMC" prefHeight="200.0" prefWidth="200.0" styleClass="dashbuttons" text="Report" textAlignment="JUSTIFY" wrapText="true">
+                            <graphic>
+                                <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/MainWindow/report.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </ToggleButton>
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+        <SplitPane dividerPositions="0.18" minHeight="698.0" minWidth="240.0" orientation="VERTICAL" prefHeight="698.0" prefWidth="240.0" styleClass="splitPane" SplitPane.resizableWithParent="false">
+            <items>
+                <AnchorPane minHeight="123.0" minWidth="240.0" prefHeight="123.0" prefWidth="240.0" styleClass="anchorPane">
+                    <children>
+                        <Pane layoutX="8.0" layoutY="7.0" prefHeight="90.0" prefWidth="90.0" styleClass="innerpaneGreenGlass" />
+                        <ImageView fx:id="imgUserphoto" fitHeight="81.0" fitWidth="80.0" layoutX="13.0" layoutY="12.0" onMouseClicked="#imgUserMC" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/avatar.jpg" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="lblUsername" layoutX="8.0" layoutY="100.0" prefHeight="17.0" prefWidth="90.0" text="User Name" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                        <Label fx:id="lblAccountSetting" layoutX="111.0" layoutY="7.0" onMouseClicked="#lblAccountSettingMC" styleClass="button" text="Account Settings" textFill="WHITE" />
+                        <ToggleButton fx:id="tglHome" layoutX="105.0" layoutY="47.0" mnemonicParsing="false" onMouseClicked="#tglHomeMC" prefHeight="40.0" prefWidth="40.0" styleClass="homeLogoutButton">
+                            <graphic>
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="homeLogoutButton">
+                                    <image>
+                                        <Image url="@../images/home.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </ToggleButton>
+                        <ToggleButton fx:id="tglLogout" layoutX="171.0" layoutY="47.0" mnemonicParsing="false" onMouseClicked="#tglLogoutMC" prefHeight="40.0" prefWidth="40.0" styleClass="homeLogoutButton">
+                            <graphic>
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="homeLogoutButton">
+                                    <image>
+                                        <Image url="@../images/logout.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </ToggleButton>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="569.0" minWidth="240.0" prefHeight="569.0" prefWidth="240.0" styleClass="anchorPane">
+                    <children>
+                        <Accordion minHeight="569.0" minWidth="238.0" prefHeight="569.0" prefWidth="238.0">
+                            <panes>
+                                <TitledPane fx:id="tpAdmin" minHeight="41.0" minWidth="238.0" prefHeight="41.0" prefWidth="238.0" style="-fx-border-color: #8dad3e; -fx-background-color: #8dad3e;" styleClass="titlePane" text="Administration">
+                                    <content>
+                                        <AnchorPane minHeight="40.0" minWidth="234.0" prefHeight="40.0" prefWidth="234.0" styleClass="anchorPane">
+                                            <children>
+                                                <ToggleButton fx:id="mtmEmployee" mnemonicParsing="false" onMouseClicked="#mtmEmployeeMC" prefHeight="50.0" prefWidth="235.0" styleClass="toggleButton" text="Employee Management">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                    <toggleGroup>
+                                                        <ToggleGroup fx:id="tggModule" />
+                                                    </toggleGroup>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="mtmUser" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#mtmUserMC" prefHeight="50.0" prefWidth="235.0" styleClass="toggleButton" text="User" toggleGroup="$tggModule">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="mtmPrililege" layoutY="102.0" mnemonicParsing="false" onMouseClicked="#mtmPrililegeMC" prefHeight="50.0" prefWidth="235.0" styleClass="toggleButton" text="Privilege" toggleGroup="$tggModule">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="mtmLoginReset" layoutY="152.0" mnemonicParsing="false" onMouseClicked="#mtmLoginResetMC" prefHeight="50.0" prefWidth="235.0" styleClass="toggleButton" text="Login Reset Settings" toggleGroup="$tggModule">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </ToggleButton>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </TitledPane>
+                                <TitledPane fx:id="tpProduction" minHeight="41.0" minWidth="238.0" prefHeight="41.0" prefWidth="238.0" style="-fx-border-color: #8dad3e; -fx-background-color: #8dad3e;" styleClass="titlePane" text="Production">
+                                    <content>
+                                        <AnchorPane minHeight="40.0" minWidth="234.0" prefHeight="40.0" prefWidth="234.0" styleClass="anchorPane">
+                                            <children>
+                                                <ToggleButton fx:id="mtmAssignment" mnemonicParsing="false" onMouseClicked="#mtmAssignmentMC" prefHeight="50.0" prefWidth="235.0" styleClass="toggleButton" text="Assignment Management" toggleGroup="$tggModule">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="mtmTapping" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#mtmTappingMC" prefHeight="50.0" prefWidth="235.0" styleClass="toggleButton" text="Tapping Management" toggleGroup="$tggModule">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="mtmProduction" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#mtmProductionMC" prefHeight="50.0" prefWidth="235.0" styleClass="toggleButton" text="Production Management" toggleGroup="$tggModule">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </ToggleButton>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </TitledPane>
+                                <TitledPane fx:id="tpSupportive" minHeight="41.0" minWidth="238.0" prefHeight="41.0" prefWidth="238.0" style="-fx-border-color: #8dad3e; -fx-background-color: #8dad3e;" styleClass="titlePane" text="Supportive">
+                                    <content>
+                                        <AnchorPane minHeight="40.0" minWidth="234.0" prefHeight="40.0" prefWidth="234.0" styleClass="anchorPane">
+                                            <children>
+                                                <ToggleButton fx:id="mtmSales" mnemonicParsing="false" onMouseClicked="#mtmSalesMC" prefHeight="50.0" prefWidth="235.0" styleClass="toggleButton" text="Sales" toggleGroup="$tggModule">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="mtmFertilize" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#mtmFertilizeMC" prefHeight="50.0" prefWidth="235.0" styleClass="toggleButton" text="Fertilize" toggleGroup="$tggModule">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="mtmTree" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#mtmTreeMC" prefHeight="50.0" prefWidth="235.0" styleClass="toggleButton" text="Tree Management" toggleGroup="$tggModule">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="mtmTreeBlock" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#mtmTreeBlockMC" prefHeight="50.0" prefWidth="235.0" styleClass="toggleButton" text="Tree Block" toggleGroup="$tggModule">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="mtmComplain" layoutY="200.0" mnemonicParsing="false" onMouseClicked="#mtmComplainMC" prefHeight="50.0" prefWidth="235.0" styleClass="toggleButton" text="Complain" toggleGroup="$tggModule">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="mtmTreatment" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#mtmTreatmentMC" prefHeight="50.0" prefWidth="235.0" styleClass="toggleButton" text="Treatment" toggleGroup="$tggModule">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </ToggleButton>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </TitledPane>
+                                <TitledPane fx:id="tpReport" minHeight="41.0" minWidth="238.0" prefHeight="41.0" prefWidth="238.0" style="-fx-border-color: #8dad3e; -fx-background-color: #8dad3e;" styleClass="titlePane" text="Reports">
+                                    <content>
+                                        <AnchorPane minHeight="40.0" minWidth="234.0" prefHeight="40.0" prefWidth="234.0" styleClass="anchorPane">
+                                            <children>
+                                                <MenuButton mnemonicParsing="false" prefHeight="50.0" prefWidth="235.0" styleClass="menuButton" text="Weekly">
+                                                    <items>
+                                                        <MenuItem mnemonicParsing="false" text="Tapping Report" />
+                                                        <MenuItem mnemonicParsing="false" text="Assignment" />
+                                                    </items>
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </MenuButton>
+                                                <MenuButton layoutY="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="235.0" styleClass="menuButton" text="Monthly">
+                                                    <items>
+                                                        <MenuItem mnemonicParsing="false" text="Monthly Sales" />
+                                                        <MenuItem mnemonicParsing="false" text="Attendance" />
+                                                    </items>
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </MenuButton>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </TitledPane>
+                            </panes>
+                        </Accordion>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </items>
+</SplitPane>
