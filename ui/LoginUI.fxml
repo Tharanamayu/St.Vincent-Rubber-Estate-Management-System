@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" onMouseDragged="#rootMD" onMousePressed="#rootMP" prefHeight="400.0" prefWidth="600.0" styleClass="anchorPane" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.LoginUIController">
+    <children>
+        <Pane opacity="0.8" prefHeight="102.0" prefWidth="600.0" styleClass="root" />
+        <Pane layoutX="81.0" layoutY="113.0" prefHeight="255.0" prefWidth="434.0" styleClass="innerpane">
+            <children>
+                <JFXTextField fx:id="txtUsername" focusColor="#007599" labelFloat="true" layoutX="62.0" layoutY="46.0" maxWidth="310.0" minWidth="310.0" onKeyReleased="#activeKR" prefHeight="30.0" prefWidth="310.0" promptText="Enter the username here" styleClass="text-Field-JFX-Login" unFocusColor="#4d4d4d">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </JFXTextField>
+                <JFXPasswordField fx:id="pswPassword" focusColor="#007599" labelFloat="true" layoutX="62.0" layoutY="102.0" maxWidth="310.0" minWidth="300.0" onKeyReleased="#activeKR" prefHeight="30.0" prefWidth="310.0" promptText="Enter the password here" styleClass="text-Field-JFX-Login" unFocusColor="#4d3e3e">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </JFXPasswordField>
+                <JFXButton fx:id="btnCancel" buttonType="RAISED" cancelButton="true" layoutX="271.0" layoutY="153.0" onAction="#btnCancelAP" prefHeight="37.0" prefWidth="100.0" styleClass="dashbuttons" text="Cancel">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btnLogin" buttonType="RAISED" defaultButton="true" layoutX="63.0" layoutY="153.0" onAction="#btnLoginAP" prefHeight="37.0" prefWidth="181.0" styleClass="dashbuttons" text="Sign in">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </JFXButton>
+                <Label fx:id="lblForgetPassword" layoutX="315.0" layoutY="232.0" onMouseClicked="#lblForgetPasswordMC" text="Forgotten Password?" textFill="#26129a" underline="true" />
+                <Label fx:id="lblCapsLock" layoutX="63.0" layoutY="205.0" prefHeight="17.0" prefWidth="310.0" />
+                <Label fx:id="lblAttempt" layoutX="63.0" layoutY="207.0" prefHeight="46.0" prefWidth="252.0" textFill="#a40f0f" />
+            </children>
+        </Pane>
+        <Label layoutX="459.0" layoutY="377.0" text="Powerd by MagicScripts" textFill="WHITE">
+            <font>
+                <Font name="Eras Medium ITC" size="12.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="95.0" fitWidth="200.0" layoutX="199.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/logo.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
