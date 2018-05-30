@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="698.0" minWidth="1118.0" prefHeight="698.0" prefWidth="1118.0" styleClass="anchorPane" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.PrivilegeUIController">
+    <children>
+        <ImageView fitHeight="698.0" fitWidth="1118.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/WindowBackground.jpg" />
+            </image>
+        </ImageView>
+        <Separator layoutX="426.0" minHeight="698.0" minWidth="6.0" orientation="VERTICAL" prefHeight="698.0" prefWidth="6.0" />
+        <Pane layoutY="-5.0" minHeight="40.0" minWidth="1118.0" prefHeight="40.0" prefWidth="1118.0" styleClass="moduletopicback">
+            <children>
+                <Label layoutX="16.0" layoutY="10.0" styleClass="moduletopic" text="Privilege" textFill="#dadada">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <AnchorPane layoutX="39.0" layoutY="88.0" prefHeight="210.0" prefWidth="323.0">
+            <children>
+                <Label layoutX="24.0" layoutY="29.0" styleClass="planeLable" text="Role" />
+                <Label layoutX="24.0" layoutY="61.0" styleClass="planeLable" text="Module" />
+                <ComboBox fx:id="cmbRole" layoutX="120.0" layoutY="25.0" onAction="#cmbRoleAP" prefHeight="25.0" prefWidth="180.0" promptText="Select Role" style="-fx-background-insets: #000000;">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Item 1" />
+                            <String fx:value="Item 2" />
+                            <String fx:value="Item 3" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Button fx:id="btnAdd" layoutX="238.0" layoutY="156.0" mnemonicParsing="false" onAction="#btnAddAP" prefHeight="25.0" prefWidth="68.0" text="Add" />
+                <Button fx:id="btnClear" layoutX="167.0" layoutY="156.0" mnemonicParsing="false" onAction="#btnClearAP" prefHeight="25.0" prefWidth="64.0" text="Clear" />
+                <Button fx:id="btnDelete" layoutX="89.0" layoutY="156.0" mnemonicParsing="false" onAction="#btnDeleteAP" prefHeight="25.0" prefWidth="64.0" text="Delete" />
+                <Button fx:id="btnUpdate" layoutX="18.0" layoutY="156.0" mnemonicParsing="false" onAction="#btnUpdateAP" prefHeight="25.0" prefWidth="64.0" text="Update" />
+                <ComboBox fx:id="cmbModule" layoutX="120.0" layoutY="58.0" onAction="#cmbModuleAP" prefHeight="25.0" prefWidth="180.0" promptText="Select Module">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Item 1" />
+                            <String fx:value="Item 2" />
+                            <String fx:value="Item 3" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <CheckBox fx:id="cbxSelect" layoutX="28.0" layoutY="117.0" mnemonicParsing="false" styleClass="planeLable" text="Select" />
+                <CheckBox fx:id="cbxInsert" layoutX="98.0" layoutY="117.0" mnemonicParsing="false" styleClass="planeLable" text="Insert" />
+                <CheckBox fx:id="cbxUpdate" layoutX="174.0" layoutY="117.0" mnemonicParsing="false" styleClass="planeLable" text="Update" />
+                <CheckBox fx:id="cbxDelete" layoutX="255.0" layoutY="117.0" mnemonicParsing="false" styleClass="planeLable" text="Delete" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="449.0" layoutY="55.0" prefHeight="599.0" prefWidth="637.0">
+            <children>
+                <TableView fx:id="tblPrivilege" layoutX="24.0" layoutY="27.0" onKeyReleased="#tblEmployeeKR" onMouseClicked="#tblEmployeeMC" prefHeight="356.0" prefWidth="590.0" styleClass="TableView">
+                    <columns>
+                        <TableColumn fx:id="colRole" prefWidth="150.0" text="Role" />
+                        <TableColumn fx:id="colModule" minWidth="157.0" prefWidth="160.0" text="Module" />
+                        <TableColumn fx:id="colSelect" prefWidth="70.0" text="Select" />
+                        <TableColumn fx:id="colInsert" prefWidth="70.0" text="Insert" />
+                        <TableColumn fx:id="colUpdate" prefWidth="70.0" text="Update" />
+                        <TableColumn fx:id="colDelete" prefWidth="70.0" text="Delete" />
+                    </columns>
+                </TableView>
+                <Pagination fx:id="pagination" layoutX="24.0" layoutY="26.0" prefHeight="417.0" prefWidth="589.0" />
+                <Label layoutX="87.0" layoutY="514.0" styleClass="planeLable" text="Module" />
+                <Label layoutX="87.0" layoutY="481.0" styleClass="planeLable" text="Role" />
+                <ComboBox fx:id="cmbSearchRole" layoutX="168.0" layoutY="477.0" onAction="#cmbSearchRoleAP" prefHeight="25.0" prefWidth="243.0" promptText="Select Role">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Item 1" />
+                            <String fx:value="Item 2" />
+                            <String fx:value="Item 3" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Button fx:id="btnSearchClear" layoutX="425.0" layoutY="510.0" mnemonicParsing="false" onAction="#btnSearchClearAP" prefHeight="25.0" prefWidth="85.0" text="Clear" />
+                <ComboBox fx:id="cmbSearchModule" layoutX="168.0" layoutY="510.0" onAction="#cmbSearchModuleAP" prefHeight="25.0" prefWidth="243.0" promptText="Select Module">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Item 1" />
+                            <String fx:value="Item 2" />
+                            <String fx:value="Item 3" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
