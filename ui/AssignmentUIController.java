@@ -374,6 +374,24 @@ public class AssignmentUIController implements Initializable {
             cmbWDEmployee.setStyle(invalid);
         }
     }
+	
+
+
+    @FXML
+    private void cmbWDNewEmployeeAP(ActionEvent event) {
+        if (!cmbWDNewEmployee.getSelectionModel().isEmpty()) {
+            cmbWDNewBlock.getItems().clear();
+            cmbWDNewBlock.setItems(TreeblockDao.getAllByEmployeeWD(cmbWDNewEmployee.getSelectionModel().getSelectedItem()));
+        }
+    }
+
+    @FXML
+    private void cmbWDNewBlockAP(ActionEvent event) {
+        if (!cmbWDNewBlock.getSelectionModel().isEmpty()) {
+            exchangingWeedingAssignment = WeedingassignmentDao.getByTreeBlockAndEmployee(cmbWDNewBlock.getSelectionModel().getSelectedItem(), cmbWDNewEmployee.getSelectionModel().getSelectedItem());
+            btnWDExchange.setDisable(false);
+        }
+    }
 
 
 //</editor-fold>
