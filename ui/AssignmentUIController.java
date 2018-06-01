@@ -337,6 +337,15 @@ public class AssignmentUIController implements Initializable {
             cmbTPNewBlock.setItems(TreeblockDao.getAllByEmployeeTP(cmbTPNewEmployee.getSelectionModel().getSelectedItem()));
         }
     }
+	
+
+    @FXML
+    private void cmbTPNewBlockAP(ActionEvent event) {
+        if (!cmbTPNewBlock.getSelectionModel().isEmpty()) {
+            exchangingTappingAssignment = TappingassignmentDao.getByTreeBlockAndEmployee(cmbTPNewBlock.getSelectionModel().getSelectedItem(), cmbTPNewEmployee.getSelectionModel().getSelectedItem());
+            btnTPExchange.setDisable(false);
+        }
+    }
 
 
 //</editor-fold>
