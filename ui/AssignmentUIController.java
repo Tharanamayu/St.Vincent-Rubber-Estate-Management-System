@@ -315,6 +315,28 @@ public class AssignmentUIController implements Initializable {
             cmbTPBlock.setStyle(invalid);
         }
     }
+	
+    @FXML
+    private void cmbTPEmployeeAP(ActionEvent event) {
+        Boolean validity = tappingAssignment.setEmployeeId(cmbTPEmployee.getSelectionModel().getSelectedItem());
+        if (validity) {
+            if (oldTappingAssignment != null && !tappingAssignment.getEmployeeId().equals(oldTappingAssignment.getEmployeeId())) {
+                cmbTPEmployee.setStyle(updated);
+            } else {
+                cmbTPEmployee.setStyle(valid);
+            }
+        } else {
+            cmbTPEmployee.setStyle(invalid);
+        }
+    }
+
+    @FXML
+    private void cmbTPNewEmployeeAP(ActionEvent event) {
+        if (!cmbTPNewEmployee.getSelectionModel().isEmpty()) {
+            cmbTPNewBlock.getItems().clear();
+            cmbTPNewBlock.setItems(TreeblockDao.getAllByEmployeeTP(cmbTPNewEmployee.getSelectionModel().getSelectedItem()));
+        }
+    }
 
 
 //</editor-fold>
