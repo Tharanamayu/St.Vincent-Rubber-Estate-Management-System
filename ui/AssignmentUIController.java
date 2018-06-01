@@ -346,6 +346,19 @@ public class AssignmentUIController implements Initializable {
             btnTPExchange.setDisable(false);
         }
     }
+	    @FXML
+    private void cmbWDBlockAP(ActionEvent event) {
+        Boolean validity = weedingAssignment.setTreeblockId(cmbWDBlock.getSelectionModel().getSelectedItem());
+        if (validity) {
+            if (oldWeedingAssignment != null && !weedingAssignment.getTreeblockId().equals(oldWeedingAssignment.getTreeblockId())) {
+                cmbWDBlock.setStyle(updated);
+            } else {
+                cmbWDBlock.setStyle(valid);
+            }
+        } else {
+            cmbWDBlock.setStyle(invalid);
+        }
+    }
 
 
 //</editor-fold>
