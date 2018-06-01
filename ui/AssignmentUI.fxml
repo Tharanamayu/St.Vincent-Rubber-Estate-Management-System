@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="698.0" minWidth="1118.0" prefHeight="698.0" prefWidth="1118.0" styleClass="anchorPane" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.AssignmentUIController">
+    <children>
+        <ImageView fitHeight="698.0" fitWidth="1118.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/WindowBackground.jpg" />
+            </image>
+        </ImageView>
+        <Pane layoutY="-5.0" minHeight="40.0" minWidth="1118.0" prefHeight="40.0" prefWidth="1118.0" styleClass="moduletopicback">
+            <children>
+                <Label layoutX="16.0" layoutY="10.0" styleClass="moduletopic" text="Employee Assignment (Under Construction)" textFill="#dadada">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <TabPane layoutY="35.0" minHeight="668.0" minWidth="1118.0" prefHeight="668.0" prefWidth="1118.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Tapping Assignment">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Pane layoutX="519.0" layoutY="29.0" prefHeight="582.0" prefWidth="571.0" styleClass="innerpaneGreenGlass">
+                                    <children>
+                                        <TableView fx:id="tblTPTreeBlock" layoutX="71.0" layoutY="33.0" onKeyReleased="#tblTPTreeBlockKR" onMouseClicked="#tblTPTreeBlockMC" prefHeight="502.0" prefWidth="429.0" styleClass="TableView">
+                                            <columns>
+                                                <TableColumn fx:id="colTPBlock" prefWidth="113.0" text="Block" />
+                                                <TableColumn fx:id="colTPEmployee" prefWidth="163.0" text="Employee" />
+                                                <TableColumn fx:id="colTPData" prefWidth="152.0" text="Assigned Date" />
+                                            </columns>
+                                        </TableView>
+                                        <Pagination fx:id="paginationTP" layoutX="71.0" layoutY="32.0" prefHeight="552.0" prefWidth="427.0" />
+                                    </children>
+                                </Pane>
+                                <Pane layoutX="26.0" layoutY="29.0" prefHeight="133.0" prefWidth="430.0" styleClass="innerpaneGreenGlass">
+                                    <children>
+                                        <Label layoutX="20.0" layoutY="74.0" styleClass="planeLable" text="Employee" />
+                                        <ComboBox fx:id="cmbTPEmployee" layoutX="110.0" layoutY="70.0" onAction="#cmbTPEmployeeAP" prefHeight="25.0" prefWidth="300.0" promptText="Select an Employee" />
+                                        <Label layoutX="20.0" layoutY="38.0" styleClass="planeLable" text="Tree Block" />
+                                        <ComboBox fx:id="cmbTPBlock" layoutX="110.0" layoutY="34.0" onAction="#cmbTPBlockAP" prefHeight="25.0" prefWidth="300.0" promptText="Select a Tree Block" />
+                                    </children>
+                                </Pane>
+                                <Separator layoutX="484.0" layoutY="-10.0" orientation="VERTICAL" prefHeight="649.0" prefWidth="20.0" />
+                                <Pane layoutX="27.0" layoutY="227.0" prefHeight="50.0" prefWidth="430.0" styleClass="innerpaneGreenGlass">
+                                    <children>
+                                        <Button fx:id="btnTPInsert" layoutX="42.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnTPInsertAP" prefHeight="30.0" prefWidth="70.0" text="Insert" />
+                                        <Button fx:id="btnTPUpdate" layoutX="132.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnTPUpdateAP" prefHeight="30.0" prefWidth="70.0" text="Update" />
+                                        <Button fx:id="btnTPDelete" layoutX="222.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnTPDeleteAP" prefHeight="30.0" prefWidth="70.0" text="Delete" />
+                                        <Button fx:id="btnTPClear" layoutX="312.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnTPClearAP" prefHeight="30.0" prefWidth="70.0" text="Clear" />
+                                    </children>
+                                </Pane>
+                                <Pane layoutX="26.0" layoutY="332.0" prefHeight="229.0" prefWidth="430.0" styleClass="innerpaneGreenGlass">
+                                    <children>
+                                        <TextField fx:id="txtTPCurrentBlock" editable="false" layoutX="14.0" layoutY="24.0" prefHeight="25.0" prefWidth="117.0" />
+                                        <TextField fx:id="txtTPCurrentEmployee" editable="false" layoutX="171.0" layoutY="24.0" prefHeight="25.0" prefWidth="240.0" />
+                                        <ComboBox fx:id="cmbTPNewBlock" layoutX="171.0" layoutY="118.0" onAction="#cmbTPNewBlockAP" prefHeight="25.0" prefWidth="240.0" promptText="Select an Employee for Exchange" />
+                                        <ComboBox fx:id="cmbTPNewEmployee" layoutX="171.0" layoutY="78.0" onAction="#cmbTPNewEmployeeAP" prefHeight="25.0" prefWidth="240.0" promptText="Select an Employee for Exchange" />
+                                        <Label layoutX="20.0" layoutY="82.0" styleClass="planeLable" text="Exchanging Employee" />
+                                        <Label layoutX="20.0" layoutY="122.0" styleClass="planeLable" text="Exchanging Block" />
+                                        <Button fx:id="btnTPExchange" layoutX="171.0" layoutY="175.0" mnemonicParsing="false" onAction="#btnTPExchangeAP" prefHeight="30.0" prefWidth="100.0" text="Exchange" />
+                                        <Button fx:id="btnTPExchangeClear" layoutX="288.0" layoutY="175.0" mnemonicParsing="false" onAction="#btnTPExchangeClearAP" prefHeight="30.0" prefWidth="100.0" text="Clear" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Weeding Assignment">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Pane layoutX="519.0" layoutY="29.0" prefHeight="582.0" prefWidth="571.0" styleClass="innerpaneGreenGlass">
+                                    <children>
+                                        <TableView fx:id="tblWDTreeBlock" layoutX="71.0" layoutY="33.0" onKeyReleased="#tblWDTreeBlockKR" onMouseClicked="#tblWDTreeBlockMC" prefHeight="502.0" prefWidth="429.0" styleClass="TableView">
+                                            <columns>
+                                                <TableColumn fx:id="colWDBlock" prefWidth="113.0" text="Block" />
+                                                <TableColumn fx:id="colWDEmployee" prefWidth="163.0" text="Employee" />
+                                                <TableColumn fx:id="colWDData" prefWidth="152.0" text="Assigned Date" />
+                                            </columns>
+                                        </TableView>
+                                        <Pagination fx:id="paginationWD" layoutX="71.0" layoutY="32.0" prefHeight="552.0" prefWidth="427.0" />
+                                    </children>
+                                </Pane>
+                                <Pane layoutX="26.0" layoutY="29.0" prefHeight="133.0" prefWidth="430.0" styleClass="innerpaneGreenGlass">
+                                    <children>
+                                        <Label layoutX="20.0" layoutY="74.0" styleClass="planeLable" text="Employee" />
+                                        <ComboBox fx:id="cmbWDEmployee" layoutX="110.0" layoutY="70.0" onAction="#cmbWDEmployeeAP" prefHeight="25.0" prefWidth="300.0" promptText="Select an Employee" />
+                                        <Label layoutX="20.0" layoutY="38.0" styleClass="planeLable" text="Tree Block" />
+                                        <ComboBox fx:id="cmbWDBlock" layoutX="110.0" layoutY="34.0" onAction="#cmbWDBlockAP" prefHeight="25.0" prefWidth="300.0" promptText="Select a Tree Block" />
+                                    </children>
+                                </Pane>
+                                <Separator layoutX="484.0" layoutY="-10.0" orientation="VERTICAL" prefHeight="649.0" prefWidth="20.0" />
+                                <Pane layoutX="27.0" layoutY="227.0" prefHeight="50.0" prefWidth="430.0" styleClass="innerpaneGreenGlass">
+                                    <children>
+                                        <Button fx:id="btnWDInsert" layoutX="42.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnWDInsertAP" prefHeight="30.0" prefWidth="70.0" text="Insert" />
+                                        <Button fx:id="btnWDUpdate" layoutX="132.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnWDUpdateAP" prefHeight="30.0" prefWidth="70.0" text="Update" />
+                                        <Button fx:id="btnWDDelete" layoutX="222.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnWDDeleteAP" prefHeight="30.0" prefWidth="70.0" text="Delete" />
+                                        <Button fx:id="btnWDClear" layoutX="312.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnWDClearAP" prefHeight="30.0" prefWidth="70.0" text="Clear" />
+                                    </children>
+                                </Pane>
+                                <Pane layoutX="26.0" layoutY="332.0" prefHeight="229.0" prefWidth="430.0" styleClass="innerpaneGreenGlass">
+                                    <children>
+                                        <TextField fx:id="txtWDCurrentBlock" editable="false" layoutX="14.0" layoutY="24.0" prefHeight="25.0" prefWidth="117.0" />
+                                        <TextField fx:id="txtWDCurrentEmployee" editable="false" layoutX="171.0" layoutY="24.0" prefHeight="25.0" prefWidth="240.0" />
+                                        <ComboBox fx:id="cmbWDNewBlock" layoutX="171.0" layoutY="118.0" onAction="#cmbWDNewBlockAP" prefHeight="25.0" prefWidth="240.0" promptText="Select an Employee for Exchange" />
+                                        <ComboBox fx:id="cmbWDNewEmployee" layoutX="171.0" layoutY="78.0" onAction="#cmbWDNewEmployeeAP" prefHeight="25.0" prefWidth="240.0" promptText="Select an Employee for Exchange" />
+                                        <Label layoutX="20.0" layoutY="82.0" styleClass="planeLable" text="Exchanging Employee" />
+                                        <Label layoutX="20.0" layoutY="122.0" styleClass="planeLable" text="Exchanging Block" />
+                                        <Button fx:id="btnWDExchange" layoutX="171.0" layoutY="175.0" mnemonicParsing="false" onAction="#btnWDExchangeAP" prefHeight="30.0" prefWidth="100.0" text="Exchange" />
+                                        <Button fx:id="btnWDExchangeClear" layoutX="288.0" layoutY="175.0" mnemonicParsing="false" onAction="#btnWDExchangeClearAP" prefHeight="30.0" prefWidth="100.0" text="Clear" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
