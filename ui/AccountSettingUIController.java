@@ -149,7 +149,30 @@ public class AccountSettingUIController implements Initializable {
 //        setStyle(initial);
     }
 
+    private void loadDetails() {
 
+        Employee employee;
+        employee = tempUser.getEmployeeId();
+
+        cmbGender.getSelectionModel().select((Gender) employee.getGenderId());
+        cmbCivilstatus.getSelectionModel().select((Civilstatus) employee.getCivilstatusId());
+        cmbDesignation.getSelectionModel().select((Designation) employee.getDesignationId());
+        cmbEmployeestatus.getSelectionModel().select((Employeestatus) employee.getEmployeestatusId());
+
+        txtAddress.setText(employee.getAddress());
+        txtNic.setText(employee.getNic());
+        txtMobile.setText(employee.getMobile());
+        txtLand.setText(employee.getLand());
+        txtEmail.setText(employee.getEmail());
+
+        dtpDob.setValue(LocalDate.parse(new SimpleDateFormat("yyyy-MM-dd").format(employee.getDob())));
+        dtpDob.getEditor().setText(new SimpleDateFormat("yyyy-MM-dd").format(employee.getDob()));
+        dtpDob.setEditable(false);
+        dtpAssign.setValue(LocalDate.parse(new SimpleDateFormat("yyyy-MM-dd").format(employee.getAssigned())));
+        dtpAssign.getEditor().setText(new SimpleDateFormat("yyyy-MM-dd").format(employee.getAssigned()));
+        dtpAssign.setEditable(false);
+
+    }
 
 //</editor-fold>
 //<editor-fold defaultstate="collapsed" desc="Binding Methods">
