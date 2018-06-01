@@ -359,6 +359,21 @@ public class AssignmentUIController implements Initializable {
             cmbWDBlock.setStyle(invalid);
         }
     }
+	
+
+    @FXML
+    private void cmbWDEmployeeAP(ActionEvent event) {
+        Boolean validity = weedingAssignment.setEmployeeId(cmbWDEmployee.getSelectionModel().getSelectedItem());
+        if (validity) {
+            if (oldWeedingAssignment != null && !weedingAssignment.getEmployeeId().equals(oldWeedingAssignment.getEmployeeId())) {
+                cmbWDEmployee.setStyle(updated);
+            } else {
+                cmbWDEmployee.setStyle(valid);
+            }
+        } else {
+            cmbWDEmployee.setStyle(invalid);
+        }
+    }
 
 
 //</editor-fold>
