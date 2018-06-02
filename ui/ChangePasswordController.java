@@ -124,6 +124,23 @@ public class ChangePasswordController implements Initializable {
             pswPassword.setStyle(initial);
         }
     }
+	
+
+    @FXML
+    private void pswConfirmPasswordKR(KeyEvent event) {
+        if (!pswConfirmPassword.getText().isEmpty()) {
+            if (pswPassword.getText().trim().equals(pswConfirmPassword.getText().trim())) {
+                pswConfirmPassword.setStyle(valid);
+                disableButtons(false);
+            } else {
+                pswConfirmPassword.setStyle(invalid);
+                disableButtons(true);
+            }
+        } else {
+            pswConfirmPassword.setStyle(initial);
+            disableButtons(true);
+        }
+    }
 
     @FXML
     private void txtHintKR(KeyEvent event) {
