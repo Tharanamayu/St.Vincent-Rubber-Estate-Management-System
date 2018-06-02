@@ -108,7 +108,22 @@ public class ChangePasswordController implements Initializable {
         }
     }
 
-
+    @FXML
+    private void pswPasswordKR(KeyEvent event) {
+        if (!pswPassword.getText().isEmpty()) {
+            if (tempUser.setPassword(pswPassword.getText().trim())) {
+                if (oldTempUser != null && !tempUser.getPassword().equals(oldTempUser.getPassword())) {
+                    pswPassword.setStyle(valid);
+                } else {
+                    pswPassword.setStyle(invalid);
+                }
+            } else {
+                pswPassword.setStyle(invalid);
+            }
+        } else {
+            pswPassword.setStyle(initial);
+        }
+    }
 
     @FXML
     private void txtHintKR(KeyEvent event) {
