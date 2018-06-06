@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="698.0" minWidth="1118.0" prefHeight="698.0" prefWidth="1118.0" styleClass="anchorPane" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ComplainUIController">
+    <children>
+        <ImageView fitHeight="698.0" fitWidth="1118.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/WindowBackground.jpg" />
+            </image>
+        </ImageView>
+        <Separator layoutX="415.0" minHeight="698.0" minWidth="6.0" orientation="VERTICAL" prefHeight="698.0" prefWidth="6.0" />
+        <Pane layoutY="-5.0" minHeight="40.0" minWidth="1118.0" prefHeight="40.0" prefWidth="1118.0" styleClass="moduletopicback">
+            <children>
+                <Label layoutX="16.0" layoutY="10.0" styleClass="moduletopic" text="Complain (Under Construction)" textFill="#dadada">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane layoutX="14.0" layoutY="66.0" prefHeight="454.0" prefWidth="390.0" styleClass="innerpaneGreenGlass">
+            <children>
+                <Label layoutX="18.0" layoutY="125.0" styleClass="planeLable" text="Complain Type" />
+                <Label layoutX="18.0" layoutY="55.0" styleClass="planeLable" text="Tree Block" />
+                <Label layoutX="18.0" layoutY="90.0" styleClass="planeLable" text="Tree No" />
+                <Label layoutX="18.0" layoutY="20.0" styleClass="planeLable" text="Complain date" />
+                <Label layoutX="18.0" layoutY="160.0" styleClass="planeLable" text="Disease" />
+                <Label layoutX="18.0" layoutY="195.0" styleClass="planeLable" text="Description" />
+                <DatePicker fx:id="dtpComplainDate" layoutX="150.0" layoutY="16.0" onAction="#dtpComplainDateAP" prefHeight="25.0" prefWidth="225.0" promptText="Enter Complain Date" />
+                <ComboBox fx:id="cmbTreeBlock" layoutX="150.0" layoutY="51.0" onAction="#cmbTreeBlockAP" prefHeight="25.0" prefWidth="225.0" promptText="Select Tree Block" />
+                <ComboBox fx:id="cmbComplainType" layoutX="150.0" layoutY="121.0" onAction="#cmbComplainTypeAP" prefHeight="25.0" prefWidth="225.0" promptText="Select Complain Type" />
+                <ComboBox fx:id="cmbDisease" layoutX="150.0" layoutY="156.0" onAction="#cmbDiseaseAP" prefHeight="25.0" prefWidth="225.0" promptText="Select Disease" />
+                <TextArea fx:id="txtDescription" layoutX="150.0" layoutY="195.0" onKeyReleased="#txtDescription" prefHeight="200.0" prefWidth="225.0" promptText="Enter Discription" />
+                <Label layoutX="10.0" layoutY="15.0" styleClass="compulsoryField" text="*" />
+                <Label layoutX="10.0" layoutY="50.0" styleClass="compulsoryField" text="*" />
+                <Label layoutX="10.0" layoutY="85.0" styleClass="compulsoryField" text="*" />
+                <Label layoutX="10.0" layoutY="120.0" styleClass="compulsoryField" text="*" />
+                <Label layoutX="18.0" layoutY="410.0" styleClass="planeLable" text="Complain Status" />
+                <Label layoutX="10.0" layoutY="405.0" styleClass="compulsoryField" text="*" />
+                <ComboBox fx:id="cmbComplainStatus" layoutX="150.0" layoutY="405.0" onAction="#cmbComplainStatusAP" prefHeight="25.0" prefWidth="225.0" promptText="Select Complain Status" />
+                <ComboBox fx:id="cmbTreeNo" layoutX="150.0" layoutY="86.0" onAction="#cmbTreeNoAP" prefHeight="25.0" prefWidth="225.0" promptText="Select Tree No" />
+            </children>
+        </Pane>
+        <Pane layoutX="14.0" layoutY="625.0" prefHeight="50.0" prefWidth="390.0" styleClass="innerpaneGreenGlass">
+            <children>
+                <Button fx:id="btnInsert" layoutX="25.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnInsertAP" prefHeight="30.0" prefWidth="70.0" text="Insert" />
+                <Button fx:id="btnUpdate" layoutX="115.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnUpdateAP" prefHeight="30.0" prefWidth="70.0" text="Update" />
+                <Button fx:id="btnDelete" layoutX="205.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnDeleteAP" prefHeight="30.0" prefWidth="70.0" text="Delete" />
+                <Button fx:id="btnTPClear" layoutX="295.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnClearAP" prefHeight="30.0" prefWidth="70.0" text="Clear" />
+            </children>
+        </Pane>
+        <Pane layoutX="430.0" layoutY="60.0" prefHeight="442.0" prefWidth="675.0" styleClass="innerpaneGreenGlass">
+            <children>
+                <Pagination fx:id="pagination" layoutX="5.0" layoutY="6.0" prefHeight="430.0" prefWidth="665.0" />
+                <TableView fx:id="tblComplain" layoutX="10.0" layoutY="14.0" onKeyReleased="#tblComplainKR" onMouseClicked="#tblComplainMC" prefHeight="362.0" prefWidth="655.0" styleClass="TableView">
+                    <columns>
+                        <TableColumn fx:id="colDate" prefWidth="98.0" text="Date" />
+                        <TableColumn fx:id="colTreeNo" prefWidth="147.0" text="Tree No" />
+                        <TableColumn fx:id="colComplainType" minWidth="0.0" prefWidth="138.0" text="Complain Type" />
+                        <TableColumn fx:id="colDsease" minWidth="7.0" prefWidth="123.0" text="Disease" />
+                        <TableColumn fx:id="colComplainStatus" minWidth="7.0" prefWidth="147.0" text="Complain Status" />
+                    </columns>
+                </TableView>
+            </children>
+        </Pane>
+        <Pane layoutX="430.0" layoutY="518.0" prefHeight="157.0" prefWidth="675.0" styleClass="innerpaneGreenGlass">
+            <children>
+                <Label layoutX="91.0" layoutY="19.0" styleClass="planeLable" text="Search by Date" />
+                <Label layoutX="91.0" layoutY="54.0" styleClass="planeLable" text="Search by Complain Type" />
+                <Label layoutX="91.0" layoutY="89.0" styleClass="planeLable" text="Search by Complain Status" />
+                <ComboBox fx:id="cmbSearchComplainType" layoutX="253.0" layoutY="50.0" onAction="#cmbSearchComplainTypeAP" prefHeight="25.0" prefWidth="225.0" promptText="Select Status" />
+                <ComboBox fx:id="cmbSearchComplainStatus" layoutX="253.0" layoutY="85.0" onAction="#cmbSearchComplainStatusAP" prefHeight="25.0" prefWidth="225.0" promptText="Select Status" />
+                <Button fx:id="btnSearchLock" layoutX="492.0" layoutY="12.0" mnemonicParsing="false" onAction="#btnSearchLockAP" prefHeight="65.0" prefWidth="70.0" text="Lock " />
+                <Button fx:id="btnSearchClear" layoutX="492.0" layoutY="84.0" mnemonicParsing="false" onAction="#btnSearchClearAP" prefHeight="10.0" prefWidth="70.0" text="Clear" />
+                <DatePicker fx:id="dtpSearchComplainDate" layoutX="253.0" layoutY="15.0" onAction="#dtpSearchComplainDateAP" prefHeight="25.0" prefWidth="225.0" promptText="Enter Complain Date" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
