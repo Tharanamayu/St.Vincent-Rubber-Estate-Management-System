@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dab2531c-85f9-48ad-8e66-a9a9ff3c9695">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="22"/>
+	<queryString>
+		<![CDATA[SELECT
+     dailytapping.`id` AS dailytapping_id,
+     dailytapping.`date` AS dailytapping_date,
+     dailytapping.`volume` AS dailytapping_volume,
+     dailytapping.`metrolac` AS dailytapping_metrolac,
+     dailytapping.`dryweight` AS dailytapping_dryweight,
+     dailytapping.`treeblock_id` AS dailytapping_treeblock_id,
+     dailytapping.`employee_id` AS dailytapping_employee_id,
+     treeblock.`id` AS treeblock_id,
+     treeblock.`no` AS treeblock_no,
+     treeblock.`numberoftrees` AS treeblock_numberoftrees,
+     treeblock.`treeblockstatus_id` AS treeblock_treeblockstatus_id,
+     treeblock.`tappinglayer_id` AS treeblock_tappinglayer_id,
+     treeblock.`planteddate` AS treeblock_planteddate,
+     treeblock.`estimatedlifetime` AS treeblock_estimatedlifetime,
+     treeblock.`area` AS treeblock_area,
+     treeblock.`clone_id` AS treeblock_clone_id,
+     treeblock.`description` AS treeblock_description,
+     employee.`id` AS employee_id,
+     employee.`name` AS employee_name,
+     employee.`gender_id` AS employee_gender_id,
+     employee.`dob` AS employee_dob,
+     employee.`nic` AS employee_nic,
+     employee.`civilstatus_id` AS employee_civilstatus_id,
+     employee.`address` AS employee_address,
+     employee.`mobile` AS employee_mobile,
+     employee.`land` AS employee_land,
+     employee.`designation_id` AS employee_designation_id,
+     employee.`email` AS employee_email,
+     employee.`assigned` AS employee_assigned,
+     employee.`image` AS employee_image,
+     employee.`employeestatus_id` AS employee_employeestatus_id
+FROM
+     `treeblock` treeblock INNER JOIN `dailytapping` dailytapping ON treeblock.`id` = dailytapping.`treeblock_id`
+     INNER JOIN `employee` employee ON dailytapping.`employee_id` = employee.`id` group by treeblock.`no`]]>
+	</queryString>
+	<field name="dailytapping_id" class="java.lang.Integer"/>
+	<field name="dailytapping_date" class="java.sql.Date"/>
+	<field name="dailytapping_volume" class="java.math.BigDecimal"/>
+	<field name="dailytapping_metrolac" class="java.lang.String"/>
+	<field name="dailytapping_dryweight" class="java.lang.Double"/>
+	<field name="dailytapping_treeblock_id" class="java.lang.Integer"/>
+	<field name="dailytapping_employee_id" class="java.lang.Integer"/>
+	<field name="treeblock_id" class="java.lang.Integer"/>
+	<field name="treeblock_no" class="java.lang.String"/>
+	<field name="treeblock_numberoftrees" class="java.lang.Integer"/>
+	<field name="treeblock_treeblockstatus_id" class="java.lang.Integer"/>
+	<field name="treeblock_tappinglayer_id" class="java.lang.Integer"/>
+	<field name="treeblock_planteddate" class="java.sql.Date"/>
+	<field name="treeblock_estimatedlifetime" class="java.lang.Integer"/>
+	<field name="treeblock_area" class="java.math.BigDecimal"/>
+	<field name="treeblock_clone_id" class="java.lang.Integer"/>
+	<field name="treeblock_description" class="java.lang.String"/>
+	<field name="employee_id" class="java.lang.Integer"/>
+	<field name="employee_name" class="java.lang.String"/>
+	<field name="employee_gender_id" class="java.lang.Integer"/>
+	<field name="employee_dob" class="java.sql.Date"/>
+	<field name="employee_nic" class="java.lang.String"/>
+	<field name="employee_civilstatus_id" class="java.lang.Integer"/>
+	<field name="employee_address" class="java.lang.String"/>
+	<field name="employee_mobile" class="java.lang.String"/>
+	<field name="employee_land" class="java.lang.String"/>
+	<field name="employee_designation_id" class="java.lang.Integer"/>
+	<field name="employee_email" class="java.lang.String"/>
+	<field name="employee_assigned" class="java.sql.Date"/>
+	<field name="employee_image" class="java.lang.Object"/>
+	<field name="employee_employeestatus_id" class="java.lang.Integer"/>
+	<variable name="dryweigth" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{dailytapping_dryweight}]]></variableExpression>
+	</variable>
+	<group name="treeblock_no">
+		<groupExpression><![CDATA[$F{treeblock_no}]]></groupExpression>
+		<groupHeader>
+			<band height="37">
+				<staticText>
+					<reportElement uuid="737eb1f8-3e6c-4872-b381-a1077d9a9ad5" mode="Opaque" x="0" y="3" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[treeblock_no]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="56d159f4-9294-4d77-ac2b-148929508962" mode="Opaque" x="100" y="3" width="197" height="32" forecolor="#006699" backcolor="#E6E6E6"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{treeblock_no}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="32">
+				<textField>
+					<reportElement uuid="56d159f4-9294-4d77-ac2b-148929508962" mode="Opaque" x="358" y="0" width="197" height="31" forecolor="#006699" backcolor="#E6E6E6"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{dryweigth}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="9dde2bf6-d35d-4c7c-b73b-fdac69efa179" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="bf5e5f17-eaa1-4dbe-b808-dc4783e6c943" x="20" y="20" width="234" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="ee3353c0-bd3b-4b76-9080-2f8b0d1d8276" x="395" y="43" width="180" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26">
+			<line>
+				<reportElement uuid="c8c601ee-f067-43b8-8c93-3530c672a7cb" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+			</line>
+			<staticText>
+				<reportElement uuid="b4073d2b-9066-4607-915f-b9c08940a28a" mode="Opaque" x="0" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[dailytapping_date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="668ada42-fdd0-43ce-b8fa-0159caba82b0" mode="Opaque" x="185" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[dailytapping_dryweight]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b3442dfc-ba7f-44f6-896d-25cf68b2a2a5" mode="Opaque" x="370" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[employee_name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="54">
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="3a804180-ce5e-4bbd-b429-6a4021fe4250" x="0" y="21" width="185" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dailytapping_date}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="55029389-eb32-41bb-b531-154b7d9211d0" x="185" y="21" width="185" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dailytapping_dryweight}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="29478880-823b-4be3-a5c0-642c1cbebff3" x="370" y="21" width="185" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="23">
+			<textField>
+				<reportElement uuid="f47d2da7-8405-4e1a-9c4c-2ad7253bac9c" mode="Opaque" x="0" y="5" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="95c0ba39-9baa-42b1-8206-f37b901819ff" mode="Opaque" x="515" y="5" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="9bdec5dd-250c-4abf-b140-149f368bb015" x="0" y="5" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
