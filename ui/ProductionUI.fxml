@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.CalendarTimeTextField?>
+
+<AnchorPane id="AnchorPane" minHeight="698.0" minWidth="1118.0" prefHeight="698.0" prefWidth="1118.0" styleClass="anchorPane" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ProductionUIController">
+    <children>
+        <ImageView fitHeight="698.0" fitWidth="1118.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/WindowBackground.jpg" />
+            </image>
+        </ImageView>
+        <Separator layoutX="426.0" minHeight="698.0" minWidth="6.0" orientation="VERTICAL" prefHeight="698.0" prefWidth="6.0" />
+        <Pane layoutY="-5.0" minHeight="40.0" minWidth="1118.0" prefHeight="40.0" prefWidth="1118.0" styleClass="moduletopicback">
+            <children>
+                <Label layoutX="16.0" layoutY="10.0" styleClass="moduletopic" text="Production" textFill="#dadada">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+      <Pane layoutX="18.0" layoutY="51.0" prefHeight="583.0" prefWidth="390.0" styleClass="innerpaneGreenGlass">
+         <children>
+            <Label layoutX="18.0" layoutY="85.0" styleClass="planeLable" text="Metrolac" />
+            <Label layoutX="18.0" layoutY="120.0" styleClass="planeLable" text="Dry Weight" />
+            <Label layoutX="18.0" layoutY="155.0" styleClass="planeLable" text="Water  Volume" />
+            <Label layoutX="18.0" layoutY="190.0" styleClass="planeLable" text="Estimate Sheet Count" />
+            <Label layoutX="18.0" layoutY="225.0" styleClass="planeLable" text="Chemical" />
+            <Label layoutX="18.0" layoutY="260.0" styleClass="planeLable" text="Dry Time" />
+            <TextField fx:id="txtMetrolac" layoutX="150.0" layoutY="151.0" onKeyReleased="#txtMetrolacKR" prefHeight="25.0" prefWidth="225.0" promptText="Enter Water Volume" />
+            <TextField fx:id="txtDryWeight" layoutX="150.0" layoutY="186.0" onKeyReleased="#txtDryWeightKR" prefHeight="25.0" prefWidth="225.0" promptText="Esimated Sheet Count" />
+            <DatePicker fx:id="dtpTappingDate" layoutX="150.0" layoutY="11.0" onAction="#dtpTappingDateAP" prefHeight="25.0" prefWidth="225.0" promptText="Enter Production Date" />
+            <Label layoutX="10.0" layoutY="80.0" styleClass="compulsoryField" text="*" />
+            <Label layoutX="10.0" layoutY="115.0" styleClass="compulsoryField" text="*" />
+            <Label layoutX="10.0" layoutY="150.0" styleClass="compulsoryField" text="*" />
+            <Label layoutX="10.0" layoutY="185.0" styleClass="compulsoryField" text="*" />
+            <Label layoutX="10.0" layoutY="220.0" styleClass="compulsoryField" text="*" />
+            <Label layoutX="10.0" layoutY="255.0" styleClass="compulsoryField" text="*" />
+            <TextField fx:id="txtVolume" layoutX="150.0" layoutY="116.0" onKeyReleased="#txtVolumeKR" prefHeight="25.0" prefWidth="225.0" promptText="Dry Weigth" />
+            <Label layoutX="18.0" layoutY="330.0" styleClass="planeLable" text="Diamound Roller Time" />
+            <Label layoutX="10.0" layoutY="325.0" styleClass="compulsoryField" text="*" />
+            <Label layoutX="18.0" layoutY="365.0" styleClass="planeLable" text="Weight After Rollers" />
+            <Label layoutX="10.0" layoutY="360.0" styleClass="compulsoryField" text="*" />
+            <CalendarTimeTextField layoutX="150.0" layoutY="326.0" prefHeight="25.0" prefWidth="225.0" />
+            <Label layoutX="18.0" layoutY="400.0" styleClass="planeLable" text="Dry in Shade Time" />
+            <Label layoutX="10.0" layoutY="430.0" styleClass="compulsoryField" text="*" />
+            <Label layoutX="18.0" layoutY="435.0" styleClass="planeLable" text="Smoke Room Start Date" />
+            <Label layoutX="10.0" layoutY="395.0" styleClass="compulsoryField" text="*" />
+            <Label layoutX="18.0" layoutY="470.0" styleClass="planeLable" text="Smoke Room End Date" />
+            <Label layoutX="10.0" layoutY="465.0" styleClass="compulsoryField" text="*" />
+            <Label layoutX="18.0" layoutY="295.0" styleClass="planeLable" text="Wet Roller Time" />
+            <Label layoutX="10.0" layoutY="290.0" styleClass="compulsoryField" text="*" />
+            <DatePicker fx:id="dtpTappingDate1" layoutX="150.0" layoutY="466.0" onAction="#dtpTappingDateAP" prefHeight="25.0" prefWidth="225.0" promptText="Enter Smoke Room Start Date" />
+            <DatePicker fx:id="dtpTappingDate2" layoutX="150.0" layoutY="430.0" onAction="#dtpTappingDateAP" prefHeight="25.0" prefWidth="225.0" promptText="Enter Smoke Room Start Date" />
+            <Label layoutX="18.0" layoutY="505.0" styleClass="planeLable" text="Final Weight" />
+            <Label layoutX="10.0" layoutY="500.0" styleClass="compulsoryField" text="*" />
+            <TextField fx:id="txtVolume1" layoutX="150.0" layoutY="501.0" onKeyReleased="#txtVolumeKR" prefHeight="25.0" prefWidth="225.0" promptText="Enter Final Weigth" />
+            <TextField fx:id="txtVolume11" layoutX="150.0" layoutY="396.0" onKeyReleased="#txtVolumeKR" prefHeight="25.0" prefWidth="225.0" promptText="Enter Dry in Shade Time" />
+            <TextField fx:id="txtVolume12" layoutX="150.0" layoutY="361.0" onKeyReleased="#txtVolumeKR" prefHeight="25.0" prefWidth="225.0" promptText="Enter Volume" />
+            <TextField fx:id="txtVolume121" layoutX="150.0" layoutY="256.0" onKeyReleased="#txtVolumeKR" prefHeight="25.0" prefWidth="225.0" promptText="Dry Time" />
+            <TextField fx:id="txtVolume122" layoutX="150.0" layoutY="221.0" onKeyReleased="#txtVolumeKR" prefHeight="25.0" prefWidth="225.0" promptText="Enter Volume" />
+            <Label layoutX="18.0" layoutY="50.0" styleClass="planeLable" text="Latex Volume" />
+            <Label layoutX="18.0" layoutY="15.0" styleClass="planeLable" text="Prduction Date" />
+            <Label layoutX="10.0" layoutY="15.0" styleClass="compulsoryField" text="*" />
+            <Label layoutX="10.0" layoutY="50.0" styleClass="compulsoryField" text="*" />
+            <TextField fx:id="txtVolume2" layoutX="150.0" layoutY="46.0" onKeyReleased="#txtVolumeKR" prefHeight="25.0" prefWidth="225.0" promptText="Enter Volume" />
+            <TextField fx:id="txtVolume21" layoutX="150.0" layoutY="81.0" onKeyReleased="#txtVolumeKR" prefHeight="25.0" prefWidth="225.0" promptText="Enter Metrolac" />
+            <Label layoutX="18.0" layoutY="540.0" styleClass="planeLable" text="Actual Sheet Count" />
+            <Label layoutX="10.0" layoutY="535.0" styleClass="compulsoryField" text="*" />
+            <TextField fx:id="txtVolume13" layoutX="150.0" layoutY="535.0" onKeyReleased="#txtVolumeKR" prefHeight="25.0" prefWidth="225.0" promptText="Enter Actual Sheet Count" />
+            <CalendarTimeTextField layoutX="150.0" layoutY="291.0" prefHeight="25.0" prefWidth="225.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="18.0" layoutY="641.0" prefHeight="50.0" prefWidth="390.0" styleClass="innerpaneGreenGlass">
+         <children>
+            <Button fx:id="btnInsert" layoutX="25.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnInsertAP" prefHeight="30.0" prefWidth="70.0" text="Insert" />
+            <Button fx:id="btnUpdate" layoutX="115.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnUpdateAP" prefHeight="30.0" prefWidth="70.0" text="Update" />
+            <Button fx:id="btnDelete" layoutX="205.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnDeleteAP" prefHeight="30.0" prefWidth="70.0" text="Delete" />
+            <Button fx:id="btnClear" layoutX="295.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnClearAP" prefHeight="30.0" prefWidth="70.0" text="Clear" />
+         </children>
+      </Pane>
+      <Pane layoutX="437.0" layoutY="51.0" prefHeight="570.0" prefWidth="675.0" styleClass="innerpaneGreenGlass">
+         <children>
+            <Pagination fx:id="pagination" layoutX="4.0" layoutY="6.0" prefHeight="545.0" prefWidth="665.0" />
+            <TableView fx:id="tblTapping" layoutX="10.0" layoutY="14.0" onKeyReleased="#tblTappingKR" onMouseClicked="#tblTappingMC" prefHeight="482.0" prefWidth="655.0" styleClass="TableView">
+               <columns>
+                  <TableColumn fx:id="colDate" minWidth="100.0" prefWidth="140.0" text="Date" />
+                  <TableColumn fx:id="colVolume" minWidth="100.0" prefWidth="100.0" text="Volume" />
+                  <TableColumn fx:id="colMetrolac" minWidth="100.0" prefWidth="100.0" text="Metrolac" />
+                  <TableColumn fx:id="colDryWeight" minWidth="100.0" prefWidth="100.0" text="Dry Weight" />
+                  <TableColumn fx:id="colTreeBlock" minWidth="80.0" text="Sheet Count" />
+                  <TableColumn fx:id="colEmpoyee" minWidth="133.0" prefWidth="133.0" text="Final Weight" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane layoutX="437.0" layoutY="632.0" prefHeight="58.0" prefWidth="675.0" styleClass="innerpaneGreenGlass">
+         <children>
+            <Label layoutX="113.0" layoutY="19.0" styleClass="planeLable" text="Search by Date" />
+            <Button fx:id="btnSearchClear" layoutX="513.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnSearchClearAP" prefHeight="30.0" prefWidth="70.0" text="Clear" />
+            <DatePicker fx:id="dtpSearchDate" layoutX="253.0" layoutY="15.0" onAction="#dtpSearchDateAP" prefHeight="25.0" prefWidth="225.0" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

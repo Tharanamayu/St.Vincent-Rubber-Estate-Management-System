@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="698.0" minWidth="1118.0" prefHeight="698.0" prefWidth="1118.0" styleClass="anchorPane" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.SalesUIController">
+    <children>
+        <ImageView fitHeight="698.0" fitWidth="1118.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/WindowBackground.jpg" />
+            </image>
+        </ImageView>
+        <Separator layoutX="426.0" minHeight="698.0" minWidth="6.0" orientation="VERTICAL" prefHeight="698.0" prefWidth="6.0" />
+        <Pane layoutY="-5.0" minHeight="40.0" minWidth="1118.0" prefHeight="40.0" prefWidth="1118.0" styleClass="moduletopicback">
+            <children>
+                <Label layoutX="16.0" layoutY="10.0" styleClass="moduletopic" text="Sales (Under Construction)" textFill="#dadada">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="698.0" minWidth="1118.0" prefHeight="698.0" prefWidth="1118.0" styleClass="anchorPane" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.TreeBlockUIController">
+    <children>
+        <ImageView fitHeight="698.0" fitWidth="1118.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/WindowBackground.jpg" />
+            </image>
+        </ImageView>
+        <Separator layoutX="426.0" minHeight="698.0" minWidth="6.0" orientation="VERTICAL" prefHeight="698.0" prefWidth="6.0" />
+        <Pane layoutY="-5.0" minHeight="40.0" minWidth="1118.0" prefHeight="40.0" prefWidth="1118.0" styleClass="moduletopicback">
+            <children>
+                <Label layoutX="16.0" layoutY="10.0" styleClass="moduletopic" text="Tree Block (Under Construction)" textFill="#dadada">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <TabPane layoutX="429.0" layoutY="35.0" minHeight="668.0" minWidth="690.0" prefHeight="668.0" prefWidth="690.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="100.0">
+            <tabs>
+                <Tab text="Map">
+                    <content>
+                        <AnchorPane>
+                            <children>
+                                <Pane layoutX="35.0" layoutY="9.0" prefHeight="616.0" prefWidth="621.0" styleClass="innerpaneGreenGlass">
+                                    <children>
+                                        <ImageView fitHeight="600.0" fitWidth="600.0" layoutX="11.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../images/map.jpg" />
+                                            </image>
+                                        </ImageView>
+                                        <ToggleButton fx:id="tglBlockB" layoutX="113.0" layoutY="146.0" mnemonicParsing="false" onAction="#tglBlockBAP" styleClass="mapButton" text="B">
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="tblMap" />
+                                            </toggleGroup>
+                                        </ToggleButton>
+                                        <ToggleButton fx:id="tglBlockA" layoutX="105.0" layoutY="89.0" mnemonicParsing="false" onAction="#tglBlockAAP" styleClass="mapButton" text="A" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockC" layoutX="113.0" layoutY="219.0" mnemonicParsing="false" onAction="#tglBlockCAP" styleClass="mapButton" text="C" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockD" layoutX="170.0" layoutY="181.0" mnemonicParsing="false" onAction="#tglBlockDAP" styleClass="mapButton" text="D" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockE" layoutX="80.0" layoutY="339.0" mnemonicParsing="false" onAction="#tglBlockEAP" styleClass="mapButton" text="E" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockF" layoutX="125.0" layoutY="281.0" mnemonicParsing="false" onAction="#tglBlockFAP" styleClass="mapButton" text="F" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockGAP" layoutX="233.0" layoutY="212.0" mnemonicParsing="false" onAction="#tglBlockGAP" styleClass="mapButton" text="G" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockH" layoutX="155.0" layoutY="339.0" mnemonicParsing="false" onAction="#tglBlockHAP" styleClass="mapButton" text="H" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockI" layoutX="210.0" layoutY="289.0" mnemonicParsing="false" onAction="#tglBlockIAP" styleClass="mapButton" text="I" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockJ" layoutX="285.0" layoutY="264.0" mnemonicParsing="false" onAction="#tglBlockJAP" styleClass="mapButton" text="J" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockK" layoutX="194.0" layoutY="418.0" mnemonicParsing="false" onAction="#tglBlockKAP" styleClass="mapButton" text="K" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockL" layoutX="233.0" layoutY="352.0" mnemonicParsing="false" onAction="#tglBlockLAP" styleClass="mapButton" text="L" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockM" layoutX="340.0" layoutY="320.0" mnemonicParsing="false" onAction="#tglBlockMAP" styleClass="mapButton" text="M" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockN" layoutX="248.0" layoutY="465.0" mnemonicParsing="false" onAction="#tglBlockNAP" styleClass="mapButton" text="N" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockO" layoutX="311.0" layoutY="391.0" mnemonicParsing="false" onAction="#tglBlockOAP" styleClass="mapButton" text="O" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockP" layoutX="328.0" layoutY="523.0" mnemonicParsing="false" onAction="#tglBlockPAP" styleClass="mapButton" text="P" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockQ" layoutX="341.0" layoutY="470.0" mnemonicParsing="false" onAction="#tglBlockQAP" styleClass="mapButton" text="Q" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockR" layoutX="386.0" layoutY="418.0" mnemonicParsing="false" onAction="#tglBlockRAP" styleClass="mapButton" text="R" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockS" layoutX="415.0" layoutY="352.0" mnemonicParsing="false" onAction="#tglBlockSAP" styleClass="mapButton" text="S" toggleGroup="$tblMap" />
+                                        <ToggleButton fx:id="tglBlockT" layoutX="500.0" layoutY="391.0" mnemonicParsing="false" onAction="#tglBlockTAP" styleClass="mapButton" text="T" toggleGroup="$tblMap" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Table">
+                    <content>
+                        <AnchorPane>
+                            <children>
+                                <Pane layoutX="7.0" layoutY="5.0" prefHeight="442.0" prefWidth="675.0" styleClass="innerpaneGreenGlass">
+                                    <children>
+                                        <Pagination fx:id="pagination" layoutX="5.0" layoutY="6.0" prefHeight="430.0" prefWidth="665.0" />
+                                        <TableView fx:id="tblTreeBlock" layoutX="10.0" layoutY="14.0" onKeyReleased="#tblTreeBlockKR" onMouseClicked="#tblTreeBlockMC" prefHeight="362.0" prefWidth="655.0" styleClass="TableView">
+                                            <columns>
+                                                <TableColumn fx:id="colBlockNo" prefWidth="85.0" text="Block No" />
+                                                <TableColumn fx:id="colTrees" prefWidth="52.0" text="Trees" />
+                                                <TableColumn fx:id="colStatus" prefWidth="88.0" text="Status" />
+                                                <TableColumn fx:id="colLayer" prefWidth="57.0" text="Layer" />
+                                                <TableColumn fx:id="colPlantedDate" prefWidth="114.0" text="Planted Date" />
+                                                <TableColumn fx:id="colLifeTime" prefWidth="104.0" text="Life Time (Years)" />
+                                                <TableColumn fx:id="colArea" prefWidth="72.0" text="Area (Arcs)" />
+                                                <TableColumn fx:id="colClone" prefWidth="81.0" text="Clone" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </Pane>
+                                <Pane layoutX="7.0" layoutY="463.0" prefHeight="157.0" prefWidth="675.0" styleClass="innerpaneGreenGlass">
+                                    <children>
+                                        <Label layoutX="113.0" layoutY="19.0" styleClass="planeLable" text="Search by Block No" />
+                                        <Label layoutX="113.0" layoutY="54.0" styleClass="planeLable" text="Search by Status" />
+                                        <Label layoutX="113.0" layoutY="89.0" styleClass="planeLable" text="Search by Layer" />
+                                        <ComboBox fx:id="cmbSearchStatus" layoutX="253.0" layoutY="50.0" onAction="#cmbSearchStatusAP" prefHeight="25.0" prefWidth="225.0" promptText="Select Status" />
+                                        <ComboBox fx:id="cmbSearchLayer" layoutX="253.0" layoutY="85.0" onAction="#cmbSearchLayerAP" prefHeight="25.0" prefWidth="225.0" promptText="Select Layer" />
+                                        <TextField fx:id="txtSearchBlockNo" layoutX="253.0" layoutY="15.0" onKeyReleased="#txtSearchBlockNoKR" prefWidth="225.0" promptText="Enter Block No" />
+                                        <Button fx:id="btnSearchLock" layoutX="492.0" layoutY="12.0" mnemonicParsing="false" onAction="#btnSearchLockAP" prefHeight="100.0" prefWidth="70.0" text="Lock " />
+                                        <Button fx:id="btnSearchClear" layoutX="492.0" layoutY="115.0" mnemonicParsing="false" onAction="#btnSearchClearAP" prefHeight="30.0" prefWidth="70.0" text="Clear" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Pane layoutX="20.0" layoutY="53.0" prefHeight="536.0" prefWidth="390.0" styleClass="innerpaneGreenGlass">
+            <children>
+                <Label layoutX="18.0" layoutY="20.0" styleClass="planeLable" text="Block no" />
+                <Label layoutX="18.0" layoutY="55.0" styleClass="planeLable" text="Number of trees" />
+                <Label layoutX="18.0" layoutY="90.0" styleClass="planeLable" text="Status" />
+                <Label layoutX="18.0" layoutY="125.0" styleClass="planeLable" text="Tapping Layer" />
+                <Label layoutX="18.0" layoutY="160.0" styleClass="planeLable" text="Planted date" />
+                <Label layoutX="18.0" layoutY="195.0" styleClass="planeLable" text="Estimated life time" />
+                <Label layoutX="18.0" layoutY="230.0" styleClass="planeLable" text="Area" />
+                <Label layoutX="18.0" layoutY="265.0" styleClass="planeLable" text="Clone" />
+                <Label layoutX="18.0" layoutY="300.0" styleClass="planeLable" text="Description" />
+                <TextField fx:id="txtEstimatedLifeTime" layoutX="150.0" layoutY="191.0" onKeyReleased="#txtEstimatedLifeTimeKR" prefHeight="25.0" prefWidth="225.0" promptText="Enter Estimated Life TIme" />
+                <TextField fx:id="txtBlockNo" layoutX="150.0" layoutY="16.0" onKeyReleased="#txtBlockNoKR" prefHeight="25.0" prefWidth="225.0" promptText="Enter Tree Block Number" />
+                <TextField fx:id="txtArea" layoutX="150.0" layoutY="226.0" onKeyReleased="#txtAreaKR" prefHeight="25.0" prefWidth="225.0" promptText="Enter Tree Block Area" />
+                <DatePicker fx:id="dtpPlantedDate" layoutX="150.0" layoutY="156.0" onAction="#dtpPlantedDateAP" prefHeight="25.0" prefWidth="225.0" promptText="Enter Planted Date" />
+                <ComboBox fx:id="cmbStatus" layoutX="150.0" layoutY="86.0" onAction="#cmbStatusAP" prefHeight="25.0" prefWidth="225.0" promptText="Select Tree Block Status" />
+                <ComboBox fx:id="cmbTappingLayer" layoutX="150.0" layoutY="121.0" onAction="#cmbTappingLayerAP" prefHeight="25.0" prefWidth="225.0" promptText="Select Tapping Layer" />
+                <ComboBox fx:id="cmbClone" layoutX="150.0" layoutY="261.0" onAction="#cmbCloneAP" prefHeight="25.0" prefWidth="225.0" promptText="Select Tree Clone" />
+                <TextArea fx:id="txtDescription" layoutX="150.0" layoutY="300.0" onKeyReleased="#txtDescription" prefHeight="200.0" prefWidth="225.0" promptText="Enter Discription" />
+                <Label layoutX="10.0" layoutY="15.0" styleClass="compulsoryField" text="*" />
+                <Label layoutX="10.0" layoutY="50.0" styleClass="compulsoryField" text="*" />
+                <Label layoutX="10.0" layoutY="85.0" styleClass="compulsoryField" text="*" />
+                <Label layoutX="10.0" layoutY="120.0" styleClass="compulsoryField" text="*" />
+                <Label layoutX="10.0" layoutY="155.0" styleClass="compulsoryField" text="*" />
+                <Label layoutX="10.0" layoutY="190.0" styleClass="compulsoryField" text="*" />
+                <Label layoutX="10.0" layoutY="225.0" styleClass="compulsoryField" text="*" />
+                <Label layoutX="10.0" layoutY="260.0" styleClass="compulsoryField" text="*" />
+                <TextField fx:id="txtTrees" layoutX="150.0" layoutY="51.0" onKeyReleased="#txtTreesKR" prefHeight="25.0" prefWidth="225.0" promptText="Enter Number of Trees" />
+            </children>
+        </Pane>
+        <Pane layoutX="20.0" layoutY="612.0" prefHeight="50.0" prefWidth="390.0" styleClass="innerpaneGreenGlass">
+            <children>
+                <Button fx:id="btnTPInsert" layoutX="25.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnTPInsertAP" prefHeight="30.0" prefWidth="70.0" text="Insert" />
+                <Button fx:id="btnTPUpdate" layoutX="115.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnTPUpdateAP" prefHeight="30.0" prefWidth="70.0" text="Update" />
+                <Button fx:id="btnTPDelete" layoutX="205.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnTPDeleteAP" prefHeight="30.0" prefWidth="70.0" text="Delete" />
+                <Button fx:id="btnTPClear" layoutX="295.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnTPClearAP" prefHeight="30.0" prefWidth="70.0" text="Clear" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
